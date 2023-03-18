@@ -149,7 +149,7 @@ section{
   margin: 40px 0px 20px 0px;
 }
 #reviews input{
-  width: -webkit-fill-available;
+  width: 94%;
   padding: 15px 20px;
   margin: 10px 0px;
   border:0px;
@@ -159,14 +159,13 @@ section{
   font-size:14px;
 }
 #reviews textarea{
-  width:-webkit-fill-available;
+  width:94%;
   padding: 15px 20px;
   margin: 10px 0px;
   border:0px;
   background: #F9EDE4;
   border-radius: 20px;
   font-family: 'Times New Roman';
-  color:#522CD;
   font-size:14px;
 }
 #reviews select{
@@ -177,7 +176,6 @@ section{
   background: #F9EDE4;
   border-radius: 20px;
   font-family: 'Times New Roman';
-  color:#522CD;
   font-size:14px;
 }
 #input_ratio{
@@ -187,7 +185,6 @@ section{
   background: #F9EDE4;
   border-radius: 20px;
   font-family: 'Times New Roman';
-  color:#522CD;
   font-size:14px;
 }
 #input_ratio input{
