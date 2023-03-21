@@ -1,308 +1,119 @@
-@font-face {
-  font-family: "Comfortaa";
-  src: url("fonts/Comfortaa-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "ComfortaaB";
-  src: url("fonts/Comfortaa-Bold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+:root {
+  --Dark_cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very_dark_blue: hsl(212, 21%, 14%);
+  --Dark_grayish_blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
 }
 html{
-  background: rgb(255,224,219);
-  background: linear-gradient(135deg, rgba(255,224,219,1) 0%, rgba(251,217,195,1) 100%);
+  background: var(--Cream);
   margin: 0;
   padding: 0;
-  font-family:'Times New Roman';
-
+  font-size:14px;
+  font-family:Montserrat;
 }
 body{
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
-a{
-  text-decoration:none;
-  color:#522C1D;
-  transition:0.2s;
-  cursor: pointer;
-}
-a:hover{
-  color:#D07E46;
-}
-h1{
-  font-size: 4vw;
-  color: #000;
-  padding: 0;
-  margin: 0;
-  font-weight: normal;
-}
-h2{
-  font-size: 2.5vw;
-  color: #DB8943;
-  padding: 0;
-  margin: 0;
-}
-h3{
-  font-size: 3vw;
-  font-weight: normal;
-  color: #522C1D;
-  padding: 0;
-  margin: 0;
-}
-h4{
-  font-size: 3vw;
-  font-weight: normal;
-  color: #522C1D;
-  padding: 0;
+p{
+  color:var(--Dark_grayish_blue);
+  line-height: 24px;
   margin: 0;
 }
 .wrap{
   display: flex;
   margin: 0 auto;
-  flex-direction: column;
+  flex-flow: row wrap;
   align-items: center;
-  padding: 20px;
-  max-width: 1400px;
-  overflow: hidden;
-  min-height: 87vh;
+  justify-content:center;
+  height: 100%;
 }
-header{
-  width: 100%;
-  display: flex;
-  justify-content: start;
+.card{
+  width:600px;
+  height:450px;
+  background:var(--White);
+  border-radius:10px;
+  overflow:hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 5px 5px 20px #00000010;
 }
-header svg{
-  width:auto;
-  height:30px;
-  shape-rendering:geometricPrecision;
-  fill-rule:evenodd;
-}
-header .str0,.str1{stroke:#2b2a29;stroke-width:2.10279;stroke-linecap:round;stroke-linejoin:round}
-header .str1{stroke:#000;stroke-width:2.4841}
-header .fil2{fill:none}
-header .fil1{fill:#a67b60}
-header .fil0{fill:#cfa58a}
-main{
-  padding-right: 140px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-section{
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 20px;
-}
-.main_title{
-  padding-top:40px;
-}
-.stitle{
+.card img{
   width:100%;
 }
-.main_img{
+.card_img{
   width:100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 300px;
 }
-#ingredients, #recipe, #photo, #reviews{
+.card_about{
+  padding:32px;
+  display: grid;
+  gap:26px;
+}
+.c_type{
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+.c_title{
+  font-size: 32px;
+  line-height: 30px;
+  color:var(--Very_dark_blue);
+  font-family:Fraunces;
+}
+.c_cost b{
+  font-size: 25px;
+  color: var(--Dark_cyan);
+  font-family: Fraunces;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.c_cost i{
+  text-decoration: line-through;
+  font-style: normal;
+  vertical-align: middle;
+}
+input[type=submit] {
+  font-weight:700;
+  color:var(--White);
+  background:var(--Dark_cyan);
   width:100%;
-}
-#ingredients table{
-  background: #F9EDE4;
-  padding: 40px;
-  border-radius: 40px;
-  width: 100%;
-  box-shadow: 20px 20px 60px #E9CABD, -20px -20px 60px #fdf1ee;
-  background: linear-gradient(135deg, rgb(250 218 206) 0%, rgb(252 227 218) 100%);
-}
-#ingredients th{
-  color:#DB8943;
-  font-weight:bold;
-}
-#ingredients tr{
-  font-family: 'Comfortaa';
-}
-#ingredients td{
-  padding:10px;
-}
-#recipe ol{
-  padding: 0px 0px 0px 14px;
-}
-#recipe li{
-  font-family: 'Comfortaa';
-  margin: 20px 0px 40px 0px;
-}
-#photo{
-  overflow: hidden;
-  border-radius: 40px;
-}
-#photo img{
-  width:100%;
-  height:auto;
-}
-#reviews{
-  flex-direction: column;
-}
-#reviews p{
-  font-family: 'Comfortaa';
-  margin: 40px 0px 20px 0px;
-}
-#reviews input{
-  width: 94%;
-  padding: 15px 20px;
-  margin: 10px 0px;
-  border:0px;
-  background: #F9EDE4;
-  border-radius: 20px;
-  font-family: 'Times New Roman';
-  font-size:14px;
-}
-#reviews textarea{
-  width:94%;
-  padding: 15px 20px;
-  margin: 10px 0px;
-  border:0px;
-  background: #F9EDE4;
-  border-radius: 20px;
-  font-family: 'Times New Roman';
-  font-size:14px;
-}
-#reviews select{
-  width:100%;
-  padding: 15px 20px;
-  margin: 10px 0px;
-  border:0px;
-  background: #F9EDE4;
-  border-radius: 20px;
-  font-family: 'Times New Roman';
-  font-size:14px;
-}
-#input_ratio{
-  padding: 15px 20px;
-  margin: 10px 0px;
-  border:0px;
-  background: #F9EDE4;
-  border-radius: 20px;
-  font-family: 'Times New Roman';
-  font-size:14px;
-}
-#input_ratio input{
-  width: auto;
-  margin: 5px 10px 5px 40px;
-}
-#reviews input[type=checkbox] {
-  width: auto;
-  margin: 20px 10px 30px 20px;
-}
-#reviews input[type=submit] {
-  background:#CFA58A;
-  width: auto;
-  padding: 15px 70px;
-  font-family: 'Comfortaa';
-}
-aside{
-  width: 140px;
-  height: 120px;
-  position: fixed;
-  right: 0;
-  top: 80px;
-  font-family: 'Comfortaa';
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-aside a{
-  line-height:20px;
-}
-footer{
-  padding:20px;
-  background-color: #805B51;
-  display: flex;
-  justify-content: end;
-}
-footer svg{
-  width:auto;
-  height:30px;
-  shape-rendering:geometricPrecision;
-  fill-rule:evenodd;
-}
-footer .str0,.str1{stroke:#f9ede4;stroke-width:2.81992;stroke-linecap:round;stroke-linejoin:round}
-footer .str1{stroke-width:3.33127}.fil0{fill:none}.fil1{fill:#cfa58a}
-
-#card_list{
-  justify-content: center;
-}
-#card_list .card{
-  width: 350px;
-  height: 500px;
-  background: #F9EDE4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 20px 20px 60px #E9CABD, -20px -20px 60px #fdf1ee;
-}
-#card_list img{
-  width:100%;
-  height:auto;
-}
-#card_list h1{
-  font-size:22px;
-  font-weight: bold;
-  padding: 0 10px;
-}
-#card_list p{
-  font-size:16px;
-  margin:0;
-  width: 100%;
-  padding: 0 10px;
-  font-family: 'Comfortaa';
-
-}
-.price{
-  font-size:10px;
-  color:#999;
-}
-#card_list button{
-  background:#CFA58A;
-  padding: 20px 70px;
-  font-family: 'Comfortaa';
-  border:0px;
-  width: 100%;
+  padding:16px;
+  cursor:pointer;
   transition:0.2s;
-  cursor: pointer;
+  border:0px;
+  border-radius:10px;
 }
-#card_list button:hover{
-  background:#805B51;
-  color:#fff
+input[type=submit]:hover{
+  background:#1A4031;
 }
-
-
-@media (min-width: 1400px) {
-  header svg{
-    height:40px;
+label{
+  position:relative;
+}
+label svg{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 25%;
+  display: block;
+  margin: auto;
+}
+@media screen and (max-width: 600px){
+  .card {
+    width: 90%;
+    height: auto;
+    grid-template-columns: 1fr;
   }
-  footer svg{
-    height:40px;
+  .card_about{
+    width:auto;
   }
-  main{
-    max-width:1440px;
-  }
-  .main_img{
-    width: 60%;
-  }
-  #ingredients, #recipe, #photo, #reviews{
-    width:45%;
-  }
-  #photo{
-    order:5;
+  .card_about{
+    padding: 20px;
+    gap: 15px;
   }
 }
