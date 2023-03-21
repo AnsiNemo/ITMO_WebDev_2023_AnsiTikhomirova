@@ -26,6 +26,7 @@ a{
   text-decoration:none;
   color:#522C1D;
   transition:0.2s;
+  cursor: pointer;
 }
 a:hover{
   color:#D07E46;
@@ -63,6 +64,9 @@ h4{
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  max-width: 1400px;
+  overflow: hidden;
+  min-height: 87vh;
 }
 header{
   width: 100%;
@@ -229,6 +233,59 @@ footer svg{
 }
 footer .str0,.str1{stroke:#f9ede4;stroke-width:2.81992;stroke-linecap:round;stroke-linejoin:round}
 footer .str1{stroke-width:3.33127}.fil0{fill:none}.fil1{fill:#cfa58a}
+
+#card_list{
+  justify-content: center;
+}
+#card_list .card{
+  width: 350px;
+  height: 500px;
+  background: #F9EDE4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 20px 20px 60px #E9CABD, -20px -20px 60px #fdf1ee;
+}
+#card_list img{
+  width:100%;
+  height:auto;
+}
+#card_list h1{
+  font-size:22px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+#card_list p{
+  font-size:16px;
+  margin:0;
+  width: 100%;
+  padding: 0 10px;
+  font-family: 'Comfortaa';
+
+}
+.price{
+  font-size:10px;
+  color:#999;
+}
+#card_list button{
+  background:#CFA58A;
+  padding: 20px 70px;
+  font-family: 'Comfortaa';
+  border:0px;
+  width: 100%;
+  transition:0.2s;
+  cursor: pointer;
+}
+#card_list button:hover{
+  background:#805B51;
+  color:#fff
+}
+
+
 @media (min-width: 1400px) {
   header svg{
     height:40px;
@@ -238,7 +295,6 @@ footer .str1{stroke-width:3.33127}.fil0{fill:none}.fil1{fill:#cfa58a}
   }
   main{
     max-width:1440px;
-    width:100%;
   }
   .main_img{
     width: 60%;
